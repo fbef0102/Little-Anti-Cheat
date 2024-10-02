@@ -300,8 +300,8 @@ void lilac_ban_client(int client, int cheat)
 	}
 
 
-	BanClient(client, get_ban_length(cheat), BANFLAG_AUTO, reason, reason, "lilac", 0);
 	CreateTimer(5.0, timer_kick, GetClientUserId(client));
+	BanClient(client, get_ban_length(cheat), BANFLAG_AUTO, reason, reason, "lilac", 0);
 }
 
 public Action timer_kick(Handle timer, int userid)

@@ -4,7 +4,7 @@
 	{
 		"Version"
 		{
-			"Latest"	"1.7.4"
+			"Latest"	"v1.7.4_4"
 		}
 
 		"Notes" "Removed the need to download other third party includes (SB, SB++, MA and Updater)."

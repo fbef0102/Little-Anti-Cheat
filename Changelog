@@ -1,3 +1,10 @@
+1.7.4_4
+- by Harry
+- Fixed errors: client is not in game
+- Fixed wrong name length in database
+- Fixed say command if client is server (0 index)
+- Add lilac.inc to support API
+
 1.7.4
 - Removed the need to download other third party includes (SB, SB++, MA and Updater).
 - Removed Angle checks in L4D1&2 (Fix coming in 1.8).

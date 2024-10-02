@@ -29,25 +29,6 @@
 #define GAME_L4D2      5
 #define GAME_L4D       6
 
-/* In case anyone wants to change this later on in a pull request or whatever,
- * DON'T DON'T DON'T DON'T DON'T DON'T DON'T DON'T DON'T DON'T DON'T!!!
- * ...  DON'T...
- * These values cannot be changed due to forwards,
- *     changing them will cause issues for other plugins.
- * You can add new stuff, but not change the number of anything here. */
-#define CHEAT_ANGLES             0
-#define CHEAT_CHATCLEAR          1
-#define CHEAT_CONVAR             2
-#define CHEAT_NOLERP             3
-#define CHEAT_BHOP               4
-#define CHEAT_AIMBOT             5
-#define CHEAT_AIMLOCK            6
-#define CHEAT_ANTI_DUCK_DELAY    7
-#define CHEAT_NOISEMAKER_SPAM    8
-#define CHEAT_MACRO              9 /* Macros aren't actually cheats, but are forwarded as such. */
-#define CHEAT_NEWLINE_NAME      10
-#define CHEAT_MAX               11
-
 #define CVAR_ENABLE                 0
 #define CVAR_WELCOME                1
 #define CVAR_SB                     2
@@ -139,7 +120,7 @@
 #define PLUGIN_NAME      "[Lilac] Little Anti-Cheat"
 #define PLUGIN_AUTHOR    "J_Tanzanite"
 #define PLUGIN_DESC      "An opensource Anti-Cheat"
-#define PLUGIN_VERSION   "1.7.4"
+#define PLUGIN_VERSION   "1.7.4_4-2024/10/3"
 #define PLUGIN_URL       "https://github.com/J-Tanzanite/Little-Anti-Cheat"
 
 /* Convars. */

@@ -28,6 +28,7 @@
 #include <sdktools_engine>
 #include <sdktools_entoutput>
 #include <convar_class>
+#include <lilac>
 #undef REQUIRE_PLUGIN /* ... */
 #undef REQUIRE_EXTENSIONS
 #if defined TF2C
@@ -155,18 +156,13 @@ public void OnPluginStart()
 #endif
 	}
 
-	forwardhandle = CreateGlobalForward("lilac_cheater_detected",
-		ET_Ignore, Param_Cell, Param_Cell);
-	forwardhandleban = CreateGlobalForward("lilac_cheater_banned",
-		ET_Ignore, Param_Cell, Param_Cell);
-	forwardhandleallow = CreateGlobalForward("lilac_allow_cheat_detection",
-		ET_Event, Param_Cell, Param_Cell);
-
 	CreateTimer(QUERY_TIMER, timer_query, _, TIMER_REPEAT);
 	CreateTimer(5.0, timer_check_ping, _, TIMER_REPEAT);
 	CreateTimer(5.0, timer_check_lerp, _, TIMER_REPEAT);
 	CreateTimer(0.5, timer_check_aimlock, _, TIMER_REPEAT);
 	CreateTimer(60.0 * 5.0, timer_decrement_macro, _, TIMER_REPEAT);
+
+
 
 	tick_rate = RoundToNearest(1.0 / GetTickInterval());
 
@@ -208,6 +204,15 @@ public void OnAllPluginsLoaded()
 
 public APLRes AskPluginLoad2(Handle hMyself, bool bLate, char[] sError, int err_max)
 {
+	forwardhandle = CreateGlobalForward("lilac_cheater_detected",
+		ET_Ignore, Param_Cell, Param_Cell);
+	forwardhandleban = CreateGlobalForward("lilac_cheater_banned",
+		ET_Ignore, Param_Cell, Param_Cell);
+	forwardhandleallow = CreateGlobalForward("lilac_allow_cheat_detection",
+		ET_Event, Param_Cell, Param_Cell);
+
+	RegPluginLibrary("lilac");
+
 	/* Been told this isn't needed, but just in case. */
 	MarkNativeAsOptional("SBBanPlayer");
 	MarkNativeAsOptional("SBPP_BanPlayer");
