@@ -5,6 +5,9 @@
 # Release
 * [Latest version always here](https://github.com/fbef0102/Little-Anti-Cheat/releases)
 
+# How to catch cheater
+* Server would log informations in ```sourcemod/logs/lilac.log``` if a player is suspicious.
+
 # What is the difference
 * J-Tanzanite retired, no longer supports, and there are still few errors to fix, so here I come
 * Don't get me wrong, I won't improve or add new anti-cheat feature, don't ask.
